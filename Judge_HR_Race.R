@@ -25,9 +25,9 @@ bonds = read_html("https://www.baseball-reference.com/players/gl.fcgi?id=bondsba
 bonds = data.frame(bonds[[5]])
 
 # change "Date" column values fram characters to "Date" type
-judge["Date"] <- as.Date(judge$Date, "%b %d")
-maris["Date"] <- as.Date(maris$Date, "%b %d")
-bonds["Date"] <- as.Date(bonds$Date, "%b %d")
+judge["Date"] <- as.Date(judge$Date)
+maris["Date"] <- as.Date(maris$Date)
+bonds["Date"] <- as.Date(bonds$Date)
 
 # change "HR" column values from characters to numeric
 judge["HR"] <- suppressWarnings(as.numeric(judge$HR))
@@ -91,7 +91,7 @@ graph <- ggplot(allGames, aes(x=Gtm, y=cumHRs, group=Player, color=Player)) +
   theme_ipsum() +
   ylab("Home Runs") +
   xlab("Game") +
-  transition_reveal(Date) +
+  transition_reveal(Gtm) +
   theme(aspect.ratio=3/4)
 
 animate(graph, fps = 7, end_pause = 10)
