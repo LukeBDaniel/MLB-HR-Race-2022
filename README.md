@@ -14,11 +14,5 @@ I originally built this project back in 2022 as a fun way to practice and learn 
 - `Judge_HR_Race_Markdown.Rmd`: An R Markdown notebook explaining the step-by-step process of building the script and visualizing the data.
 - `hr_race.gif`: The final generated animation of the home run race.
 
-## Prerequisites
-To run this code, you will need R installed along with the following packages:
-```r
-install.packages(c("ggplot2", "gganimate", "ggimage", "viridis", "hrbrthemes", "readr", "dplyr", "rvest", "strex"))
-```
-
 ## Note on 2022+ Baseball-Reference Data
 This project was originally written in 2022. It has been updated to account for a change in Baseball-Reference's date formatting (from `"Apr 08"` to `"YYYY-MM-DD"`).
